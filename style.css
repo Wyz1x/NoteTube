@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background: #14110F;
+    color: #F3F3F4;
+    font-family: "Montserrat", sans-serif;
+}
+
+.mouse-effect{
+    position: fixed;
+    width: 20px; 
+    height: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s linear;
+    filter: blur(3rem); 
+    z-index: 0;
+    box-shadow: 
+        0 0 60px #F5C24C,
+        0 0 120px #F5C24C,
+
+        inset 0 0 50px #F5C24C; 
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #2a2a2a;
+    border-radius: 10px;
+    border: 2px solid #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #8a6f30;
+}
+
+.header{
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.header-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.headers-header{
+    font-size: 48px;
+}
+
+.header-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.header-link{
+    color: #EECAB2;
+    text-decoration: none;
+    margin-right: 60px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.header-links a:last-child{
+    margin-right: 20px;
+}
+
+.greetings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+}
+
+.greetings-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background: #26201E; */
+    border-radius: 10px;
+    width: 80%;
+    height: 70vh;
+}
+
+.greetings-header{
+    font-size: 128px;
+}
+
+.greetings-header-second{
+    color: #FFC857;
+}
+
+.greetings-p{
+    font-size: 26px;
+    width: 576px;
+    color: #D9C5B2;
+    text-align: center;
+}
+
+.greetings-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 430px;
+}
+
+.greetings-btn{
+    background: transparent;
+    border: 1px solid #F5C24C;
+    color: #F5C24C;
+    width: 200px;
+    height: 55px;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 35px;
+    transition: 
+        background 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.tryitnow-btn{
+    background: #F2B84B;
+    color: #14110F;
+    transition: 300ms;
+}
+
+.tryitnow-btn:hover{
+    background: #c49538;
+    border: 1px solid #c49538;
+}
+
+.greetings-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1px 5px rgba(245, 194, 76, 0.3);
+}
+
+
+.info{
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: linear-gradient(
+        #14110F 0%,
+        #110f0d 10%,
+        #0f0e0c 25%
+    );
+    z-index: -2;
+}
+
+.info-main{
+    margin: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-head-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.info-header{
+    font-size: 96px;
+    color: #FFC857;
+    z-index: 1;
+}
+
+.question-mark{
+    display: inline-block;
+    color: #FFC857;
+    font-size: 138px;
+    transform: rotate(20deg);
+}
+/* 
+.steps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+.step-n-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-step{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    margin: 25px;
+    padding: 18px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.info-step:hover{
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.08);    
+}
+
+.step-number{
+    color: #F5C24C;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.info-text{
+    font-size: 26px;
+    color: #D9C5B2;
+}
+
+.whywe{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0f0e0c;
+}
+
+.whywe-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.whywe-head-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.whywe-header{
+    font-size: 96px;
+    color: #FFC857;
+}
+
+.whywe-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.whywe-card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(6px);
+    border-radius: 18px;
+    margin: 10px;
+    padding: 28px 20px;
+    cursor: pointer;
+    transition: 300ms;
+    width: 100%;
+    font-size: 22px;
+}
+
+.whywe-card-header{
+    color: #f8e0d0;
+    font-weight: 500;
+}
+
+.whywe-card:hover{
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.08);    
+}
+
+b{
+    color: #F5C24C;
+    font-weight: 700;
+}
+
+.faq{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(
+        #0f0e0c 0%,
+        #0f0e0c 60%,
+        rgb(15, 11, 3) 100%
+    );
+    
+}
+
+.faq-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.faq-header{
+    font-size: 86px;
+    color: #FFC857;
+    margin: 25px;
+}
+
+.faq-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.faq-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.faq-card{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    margin: 5px;
+    padding: 18px;
+    cursor: pointer;
+    transition: 300ms;
+    width: 80%;
+}
+
+.faq-card:hover{
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.faq-q{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-card-h1{
+    font-size: 24px;
+}
+
+.faq-q i{
+    font-size: 40px;
+    font-style: normal;
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.faq-a {
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 0;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    opacity: 0;
+}
+
+.faq-cont.active .faq-a {
+    max-height: 500px;
+    padding: 25px;
+    opacity: 1;
+}
+.faq-cont.faq-cont.active .faq-q i{
+    transform: rotate(45deg);
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(15, 11, 3);
+}
+
+.footer-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.footer-a{
+    color: #9A9A9A;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-a:hover{
+    color: #F5C76A;
+}
+
+.footer-header{
+    color: #8E8E8E;
+    font-size: 24px;
+}
+
+.footer-p{
+    color: #5a5a5a;
+    font-size: 20px;
+}
+
+.footer-grids{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+@media (max-width: 1024px) {
+    .greetings-header{
+        font-size: 98px;
+    }
+
+    .whywe-cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 0px;
+    }
+    .whywe-main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .whywe-header{
+        font-size: 64px;
+    }
+
+    .whywe-card{
+        margin: 8px;
+        min-height: clamp(250px, 80vh, 200px);
+        width: calc(50% - 20px);
+    }
+
+}
+
+
+@media (max-width: 768px){
+    .greetings-header{
+        font-size: 68px;
+    }
+
+    .greetings-p{
+        font-size: 20px;
+        width: 476px;
+    }
+
+    .info-head-div{
+        text-align: center;
+    }
+}
